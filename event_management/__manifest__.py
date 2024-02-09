@@ -4,6 +4,10 @@
     'sequence' : -100,
     'description': 'A Management Module for managing and handling events',
     'summary': 'Event management system',
+    'data' : [
+        'views/menu.xml',
+        'views/clients.xml',
+    ],
     'installable': True,
     'application': True,
     'license': 'OEEL-1',

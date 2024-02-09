@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_clients" model="ir.actions.act_window">
+        <field name="name">Clients 123</field>
+        <field name="res_model">event.registration</field>
+        <field name="view_mode">tree,kanban,form,pivot</field>
+    </record>
+</odoo>
