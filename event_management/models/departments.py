@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 from odoo import fields, models
 
 class Departments(models.Model):
@@ -8,5 +10,5 @@ class Departments(models.Model):
     contact_no = fields.Char('Contact Number')
     head = fields.Char('Head of Department',required=True)
     email_id = fields.Char('Email ID', required=True)
-    employees = fields.one2many('team.members',string='Employee\'s')
+    employees = fields.One2many('team.members', string='Employee\'s', inverse_name='department')
 
