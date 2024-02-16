@@ -10,5 +10,5 @@ class Departments(models.Model):
     contact_no = fields.Char('Contact Number')
     head = fields.Char('Head of Department',required=True)
     email_id = fields.Char('Email ID', required=True)
-    employees = fields.One2many('team.members', string='Employee\'s', inverse_name='department')
+    employees_ids = fields.One2many('team.members', string='Employee\'s', inverse_name='department_id')
 

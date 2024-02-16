@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Action -->
+    <record id="action_departments" model="ir.actions.act_window">
+        <field name="name">Departments</field>
+        <field name="res_model">departments</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="help" type="html">
+            <p>Add a Department</p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,8 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+event_management.access_event_event,Event,model_event_event,base.group_user,1,1,1,1
+event_management.access_event_tags,Event Tags,model_event_tags,base.group_user,1,1,1,1
+event_management.access_event_attendes,Event Attendees,model_event_attendees,base.group_user,1,1,1,1
+event_management.access_event_registration,Event Registration,model_event_registration,base.group_user,1,1,1,1
+event_management.access_event_template,Event Template,model_event_tags,base.group_user,1,1,1,1
+event_management.access_departments,Departments,model_departments,base.group_user,1,1,1,1
+event_management.access_team_members,Team Members,model_team_members,base.group_user,1,1,1,1
