@@ -7,7 +7,7 @@
     'sequence' : -100,
     'description': 'A Management Module for managing and handling events',
     'summary': 'Event management system',
-    'data' : [
+    'data': [
         'security/ir.model.access.csv',
         'views/clients.xml',
         'views/departments_views.xml',

@@ -7,7 +7,7 @@
         </menuitem>
 
         <menuitem id="event_management_teams" name="Teams">
-            <menuitem id="event_management_departments" action="action_departments" name="departments"></menuitem>
+            <menuitem id="event_management_departments" action="action_departments" name="Departments"></menuitem>
             <menuitem id="event_management_team_members" action="action_team_members" name="Team Members"></menuitem>
         </menuitem>
     </menuitem>

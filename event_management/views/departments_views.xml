@@ -9,4 +9,43 @@
             <p>Add a Department</p>
         </field>
     </record>
+
+    <!--Tree View-->
+    <record id="departments_tree_view" model="ir.ui.view">
+        <field name="name">Departments List View</field>
+        <field name="model">departments</field>
+        <field name="arch" type="xml">
+            <tree expand="1" string="List View">
+                <field name="name"/>
+                <field name="contact_no"/>
+                <field name="head"/>
+                <field name="email_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--Form View-->
+    <record id="departments_form_view" model="ir.ui.view">
+        <field name="name">Departments form view</field>
+        <field name="model">departments</field>
+        <field name="arch" type="xml">
+            <form string="Form View">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="contact_no"/>
+                    </group>
+                    <group>
+                        <field name="head"/>
+                        <field name="email_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Employees">
+                            <field name="employees_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
 </odoo>

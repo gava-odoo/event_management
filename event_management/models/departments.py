@@ -8,7 +8,7 @@ class Departments(models.Model):
 
     name = fields.Char('Name', required=True)
     contact_no = fields.Char('Contact Number')
-    head = fields.Char('Head of Department',required=True)
+    head = fields.Many2one('team.members', string='Head')
     email_id = fields.Char('Email ID', required=True)
     employees_ids = fields.One2many('team.members', string='Employee\'s', inverse_name='department_id')
 

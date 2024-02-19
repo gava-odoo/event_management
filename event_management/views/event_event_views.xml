@@ -42,23 +42,6 @@
                     <group>
                         <field name="tag_ids" widget="many2many_tags"/>
                     </group>
-                    <!-- <group>
-                        <group>
-                            <field name="property_type_id"/>
-                        </group>
-                        <group>
-                            <field name="postcode"/>
-                        </group>
-                        <group>
-                            <field name="expected_price"/>
-                        </group>
-                        <group>
-                            <field name="date_availability"/>
-                        </group>
-                        <group>
-                            <field name="selling_price"/>
-                        </group>
-                    </group> -->
                     <notebook>
                         <page string="Management">
                             <group>
@@ -78,6 +61,19 @@
                     </notebook>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <!-- Filter -->
+    <record id="event_event_search_view" model="ir.ui.view">
+        <field name="name">Custom Search</field>
+        <field name="model">event.event</field>
+        <field name="arch" type="xml">
+            <search string="Custom Search">
+                <field name="name"/>
+                <field name="budget"/>
+                <field name="tag_ids"/>
+            </search>
         </field>
     </record>
 </odoo>
