@@ -3,8 +3,8 @@
 from odoo import models,fields
 
 class EventRegistration(models.Model):
-    _name = "event.registration"
-    _description = "Event Registration"
+    _name = 'event.registration'
+    _description = 'Event Registration'
 
     name = fields.Char(string='Name', required=True)
     email = fields.Char(string='Email-id', required=True)
