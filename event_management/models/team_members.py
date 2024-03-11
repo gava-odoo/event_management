@@ -5,6 +5,7 @@ from odoo import api, fields, models
 class TeamsMembers(models.Model):
     _name = 'team.members'
     _description = 'The different teams which will work for events'
+    _order = 'id'
 
     name = fields.Char('Name', required=True)
     contact_no = fields.Char('Contact Number')

@@ -5,6 +5,7 @@ from odoo import models,fields
 class EventAttendees(models.Model):
     _name = 'event.attendees'
     _description = 'Attendees of an event'
+    _order = 'name'
 
     name = fields.Char(string='Name', required=True)
     email = fields.Char(string='Email-id', required=True, default='alex@odoo.com')

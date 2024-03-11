@@ -4,11 +4,14 @@
     <menuitem id="event_management_root" name="Event Management">
         <menuitem id="event_management_events" name="Events">
             <menuitem id="event_management_events_action" action="action_event"></menuitem>
+            <menuitem id="event_management_template_action" action="action_event_template"></menuitem>
+            <menuitem id="event_management_tags_action" action="action_event_tags"></menuitem>
         </menuitem>
 
         <menuitem id="event_management_teams" name="Teams">
             <menuitem id="event_management_departments" action="action_departments" name="Departments"></menuitem>
             <menuitem id="event_management_team_members" action="action_team_members" name="Team Members"></menuitem>
+            <menuitem id="event_management_res_partner" action="action_res_partner" name="Clients"></menuitem>
         </menuitem>
     </menuitem>
 </odoo>

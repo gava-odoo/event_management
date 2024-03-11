@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="event.template" id="template-1">
+            <field name="name">Wedding</field>
+        </record>
+
+        <record model="event.template" id="template-2">
+            <field name="name">Garba</field>
+        </record>
+
+        <record model="event.template" id="template-3">
+            <field name="name">Music Concert</field>
+        </record>
+
+        <record model="event.template" id="template-4">
+            <field name="name">Comedy Show</field>
+        </record>
+
+        <record model="event.template" id="template-5">
+            <field name="name">Tournament</field>
+        </record>
+    </data>
+</odoo>

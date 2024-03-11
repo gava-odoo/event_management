@@ -4,6 +4,9 @@ from odoo import models,fields
 
 class EventTemplate(models.Model):
     _name = 'event.template'
-    _description = 'All type of Evnets we organise'
+    _description = 'All type of Events we organise'
+    _order = 'sequence'
 
-    name = fields.Selection(selection=[('wedding','Wedding'), ('garba','Garba'), ('music concert','Music Concert'), ('comedy show','Comedy Show'), ('tournament','Tournament')])
+    name = fields.Char(string='Name', required=True)
+    event_expenses_ids = fields.One2many('event.expenses','event_type_id')
+    sequence = fields.Integer(string='Sequence', default=1)

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="event.event" id="event-1">
+            <field name="name">Anant's Wedding</field>
+            <field name="description">A big wedding celebration at jamnagar</field>
+            <field name="budget">120000000</field>
+            <field name="limited_seats_available">true</field>
+            <field name="total_seats_available">12000</field>
+            <field name="start_date">2024-02-22</field>
+            <field name="end_date">2024-02-29</field>
+            <field name="state">scheduled</field>
+        </record>
+
+        <record model="event.event" id="event-2">
+            <field name="name">Birthday Party</field>
+            <field name="description">Aaj Mere yaar ka Bday hai</field>
+            <field name="budget">100</field>
+            <field name="limited_seats_available">true</field>
+            <field name="total_seats_available">120</field>
+            <field name="start_date">2024-03-13</field>
+            <field name="end_date">2024-03-13</field>
+            <field name="state">registered</field>
+        </record>
+
+        <record model="event.event" id="event-3">
+            <field name="name">Office Party</field>
+            <field name="description">Celebrating opening of new office</field>
+            <field name="budget">10000</field>
+            <field name="limited_seats_available">true</field>
+            <field name="total_seats_available">1000</field>
+            <field name="start_date">2024-03-12</field>
+            <field name="end_date">2024-03-12</field>
+            <field name="state">started</field>
+        </record>
+
+        <record model="event.event" id="event-4">
+            <field name="name">Anniversary</field>
+            <field name="description">Celebrating 25th anniversary</field>
+            <field name="budget">50000</field>
+            <field name="limited_seats_available">false</field>
+            <field name="total_seats_available">1500</field>
+            <field name="start_date">2024-02-25</field>
+            <field name="end_date">2024-02-25</field>
+            <field name="state">finished</field>
+        </record>
+
+        <record model="event.event" id="event-5">
+            <field name="name">Holi Dj Party</field>
+            <field name="description">A big celebration for Holi</field>
+            <field name="budget">500000</field>
+            <field name="limited_seats_available">false</field>
+            <field name="total_seats_available">1500</field>
+            <field name="start_date">2024-03-18</field>
+            <field name="end_date">2024-03-19</field>
+            <field name="state">cancelled</field>
+        </record>
+    </data>
+</odoo>

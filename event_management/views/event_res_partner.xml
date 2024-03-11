@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action -->
+    <record id="action_res_partner" model="ir.actions.act_window">
+        <field name="name">Event Tags</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>Add an Client</p>
+        </field>
+    </record>
+
+    <!-- Tree View
+    <record id="res_partner_view_tree" model="ir.ui.view">
+        <field name="name">res partner tree view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+    </record> -->
+
+    <!-- Form View -->
+    <record id="res_partner_view_form" model="ir.ui.view">
+        <field name="name">res partner form view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <notebook>
+                <page name="Events" position="inside">
+                    <field name="event_ids"/>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

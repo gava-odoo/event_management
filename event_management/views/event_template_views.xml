@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <!-- Action -->
+    <record id="action_event_template" model="ir.actions.act_window">
+        <field name="name">Event Templates</field>
+        <field name="res_model">event.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>Add an Event Template</p>
+        </field>
+    </record>
+
+    <!--Tree View-->
+    <record id="event_template_view_tree" model="ir.ui.view">
+        <field name="name">Event Template List View</field>
+        <field name="model">event.template</field>
+        <field name="arch" type="xml">
+            <tree expand="1" string="List View">
+                <field name="name"/>
+                <field name="sequence" widget="handle"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="event_template_view_form" model="ir.ui.view">
+        <field name="name">Event Template form view</field>
+        <field name="model">event.template</field>
+        <field name="arch" type="xml">
+            <form string="Form View">
+                <sheet>
+                    <div name="button_box" class="oe_button_box">
+                        <button class="oe_stat_button" name="%(action_event_expenses)d" type="action" string="Events" icon="fa-star">
+                            <field name="event_expenses_ids" widget="statinfo" string="Expenses"/>
+                        </button>
+                    </div>
+                    <field name="name"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

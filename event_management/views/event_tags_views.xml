@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <!-- Action -->
+    <record id="action_event_tags" model="ir.actions.act_window">
+        <field name="name">Event Tags</field>
+        <field name="res_model">event.tags</field>
+        <field name="view_mode">tree</field>
+        <field name="help" type="html">
+            <p>Add an Event Tag</p>
+        </field>
+    </record>
+
+    <!--Tree View-->
+    <record id="event_tags_view_tree" model="ir.ui.view">
+        <field name="name">Event Tags List View</field>
+        <field name="model">event.tags</field>
+        <field name="arch" type="xml">
+            <tree expand="1" string="List View" editable="top">
+                <field name="name"/>
+                <field name="color"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

@@ -7,3 +7,4 @@ class EventTags(models.Model):
     _description = 'Tags for different events'
 
     name = fields.Char(string='Event Type', required=True)
+    color = fields.Integer(string="color")
