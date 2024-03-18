@@ -8,6 +8,9 @@
     'description': 'A Management Module for Creating Project for Events',
     'summary': 'Event project creation',
     'depends' : ['event_management', 'project'],
+    'data': [
+        'report/event_project_reports.xml',
+    ],
     'installable': True,
     'application': True,
     'license': 'OEEL-1',

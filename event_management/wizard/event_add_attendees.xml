@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="event_add_attendees_view_form" model="ir.ui.view">
+        <field name="name">Add Events Attendee Form View</field>
+        <field name="model">event.add.attendees</field>
+        <field name="arch" type="xml">
+            <form string="Add Attendee">
+                <group class="oe_title">
+                    <field name="member_id"/>
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                </group>
+                <footer>
+                    <button name="action_add_attendee" string="Make an attendee" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_event_add_attendee" model="ir.actions.act_window">
+        <field name="name">Add Attendee</field>
+        <field name="res_model">event.add.attendees</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="event_add_attendees_view_form"/>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_event_event"/>
+        <field name="binding_view_types">list</field>
+    </record>
+</odoo>

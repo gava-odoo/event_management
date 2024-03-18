@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_estate_property" model="ir.actions.report">
+            <field name="name">Event Expenses</field>
+            <field name="model">event.event</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">event_management.report_events</field>
+            <field name="report_file">event_management.report_events</field>
+            <field name="print_report_name">'Event Expenses'</field>
+            <field name="binding_model_id" ref="model_event_event"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+
+    <data>
+        <record id="action_report_event_customer" model="ir.actions.report">
+            <field name="name">Customer's Events Expenses</field>
+            <field name="model">res.users</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">event_management.report_customer_properties</field>
+            <field name="report_file">event_management.report_customer_properties</field>
+            <field name="print_report_name">'Customer Event Expenses'</field>
+            <field name="binding_model_id" ref="base.model_res_users"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

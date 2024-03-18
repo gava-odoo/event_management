@@ -12,4 +12,5 @@ class EventAttendees(models.Model):
     phone = fields.Char(string='Phone No.', required=True)
     details = fields.Text(string='What are you looking for')
     events_ids = fields.Many2many('event.event',string='Event')
-    tag_ids = fields.Many2many('event.tags',string='Tags')
+    member_id = fields.Many2one('team.members', string='Team Member')
+    

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Inherited Template -->
+    <template id="report_events_bid_info_inherit_account" inherit_id="event_management.report_events_bid_info">
+        <xpath expr="//table" position="before">
+            <t t-if="event.state in ('started', 'finished', 'cancelled')">
+                <strong>!!! Project Already Exists !!!</strong>
+            </t>
+        </xpath>
+    </template>
+</odoo>

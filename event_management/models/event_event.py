@@ -25,6 +25,9 @@ class Events(models.Model):
     salesman_id = fields.Many2one('res.users', string='Salesman', default=lambda self: self.env.user)
     expense_ids = fields.One2many('event.expenses', 'event_id')
     amount_spent = fields.Float(string='Amount Spent')
+    image = fields.Image(string='Image')
+    location = fields.Text('Location')
+    event_attendees_ids = fields.Many2many('event.attendees',relation='attendees')
     state = fields.Selection(selection = [
         ('scheduled', 'Scheduled'),
         ('registered', 'Registered'),
@@ -59,7 +62,7 @@ class Events(models.Model):
         else:
             self.duration = 3
 
-    @api.constrains('start_end', 'end_date')
+    @api.constrains('start_date', 'end_date')
     def check_duration(self):
         if (self.end_date < self.start_date):
             raise UserError('End date cannot be before start date')

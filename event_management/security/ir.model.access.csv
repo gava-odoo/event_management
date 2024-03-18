@@ -7,3 +7,4 @@ event_management.access_event_template,Event Template,model_event_template,base.
 event_management.access_departments,Departments,model_departments,base.group_user,1,1,1,1
 event_management.access_team_members,Team Members,model_team_members,base.group_user,1,1,1,1
 event_management.access_event_expenses,Event Expenses,model_event_expenses,base.group_user,1,1,1,1
+event_management.access_event_add_attendees,Event Add Attendees,model_event_add_attendees,base.group_user,1,1,1,1

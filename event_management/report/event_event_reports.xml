@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_events">
+        <t t-foreach="docs" t-as="event">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>
+                            <span t-field="event.name"/>
+                        </h2>
+                        <div>
+                            <strong>Customer </strong>
+                            <span t-field="event.customer_id"/>
+                        </div>
+                        <t t-call="event_management.report_events_bid_info"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="report_customer_properties">
+        <t t-foreach="docs" t-as="customer">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>
+                            <strong>Customer: </strong>
+                            <span t-field="customer.name"/>
+                        </h2>
+                        <t t-if="customer.event_ids">
+                            <t t-set="events" t-value="customer.mapped('event_ids')"/>
+                            <t t-foreach="events" t-as="event">
+                                <h3>
+                                    <span t-field="event.name"/>
+                                </h3>
+                                <t t-call="event_management.report_events_bid_info"/>
+                            </t>
+                        </t>
+                        <strong t-else="">Customer has no Events!</strong>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="report_events_bid_info">
+        <div>
+            <strong>Budget: </strong>
+            <span t-field="event.budget"/>
+        </div>
+        <div>
+            <strong>Status: </strong>
+            <span t-field="event.state"/>
+        </div>
+        <br/>
+        <table class="table" t-if="event.expense_ids">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Event</th>
+                    <th>Event Type</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-set="expenses" t-value="event.mapped('expense_ids')"/>
+                <tr t-foreach="expenses" t-as="expense">
+                    <td>
+                        <span t-field="expense.name"/>
+                    </td>
+                    <td>
+                        <span t-field="expense.amount"/>
+                    </td>
+                    <td>
+                        <span t-field="expense.event_id"/>
+                    </td>
+                    <td>
+                        <span t-field="expense.event_type_id"/>
+                    </td>
+                    <td>
+                        <span t-field="expense.status"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <strong t-else="">No expenses have been made yet :(</strong>
+    </template>
+</odoo>
