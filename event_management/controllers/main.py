@@ -10,6 +10,7 @@ class EventManagement(http.Controller):
         if date:
             condition.append(('start_date', '>', date))
         page = int(page)
+        # gava
         events_per_page = 3
         Event = http.request.env['event.event']
         all_events = Event.search_count(condition)
